@@ -4,7 +4,7 @@
 
 {
     "name": "ERC Intercompany Journal Entries & Transactions",
-    "summary": "Global Intercompany Segregation: Dynamic Account & Journal Creation in 50+ Idioms",
+    "summary": "Global Intercompany Segregation: Dynamic Account & Journal Creation in 50+ Countries",
     "description": """
 Professional Intercompany Financial Segregation
 ==============================================

@@ -1,0 +1,454 @@
+<odoo noupdate="0">
+    <record id="erc_intercompany_country_profile_ao" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.ao"/>
+        <field name="receivable_seed_code">3112110000</field>
+        <field name="payable_seed_code">3212110000</field>
+        <field name="income_production_seed_code">6100000000</field>
+        <field name="income_service_seed_code">6200000000</field>
+        <field name="expense_service_seed_code">7520000000</field>
+        <field name="expense_other_seed_code">7130000000</field>
+    </record>
+    <record id="erc_intercompany_country_profile_us" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.us"/>
+        <field name="receivable_seed_code">121000</field>
+        <field name="payable_seed_code">211000</field>
+        <field name="income_production_seed_code">400000</field>
+        <field name="income_resale_seed_code">400100</field>
+        <field name="income_service_seed_code">400300</field>
+        <field name="expense_service_seed_code">653500</field>
+        <field name="expense_other_seed_code">500000</field>
+    </record>
+    <record id="erc_intercompany_country_profile_pt" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.pt"/>
+        <field name="receivable_seed_code">21911</field>
+        <field name="payable_seed_code">2211</field>
+        <field name="income_production_seed_code">711</field>
+        <field name="income_service_seed_code">721</field>
+        <field name="expense_service_seed_code">6268</field>
+        <field name="expense_other_seed_code">6228</field>
+    </record>
+    <record id="erc_intercompany_country_profile_be" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.be"/>
+        <field name="receivable_seed_code">404</field>
+        <field name="payable_seed_code">440</field>
+        <field name="income_production_seed_code">7000</field>
+        <field name="income_service_seed_code">7001</field>
+        <field name="expense_service_seed_code">613310</field>
+        <field name="expense_other_seed_code">61329</field>
+    </record>
+    <record id="erc_intercompany_country_profile_es" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.es"/>
+        <field name="receivable_seed_code">4300</field>
+        <field name="payable_seed_code">4000</field>
+        <field name="income_production_seed_code">7000</field>
+        <field name="income_service_seed_code">7050</field>
+        <field name="expense_service_seed_code">623</field>
+        <field name="expense_other_seed_code">629</field>
+    </record>
+    <record id="erc_intercompany_country_profile_it" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.it"/>
+        <field name="receivable_seed_code">1501</field>
+        <field name="payable_seed_code">2501</field>
+        <field name="income_production_seed_code">3101</field>
+        <field name="income_service_seed_code">3101</field>
+        <field name="expense_service_seed_code">4204</field>
+        <field name="expense_other_seed_code">4404</field>
+    </record>
+    <record id="erc_intercompany_country_profile_br" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.br"/>
+        <field name="receivable_seed_code">1.01.02.01</field>
+        <field name="payable_seed_code">2.01.01.01</field>
+        <field name="income_production_seed_code">3.01.01.01</field>
+        <field name="income_resale_seed_code">3.01.01.02</field>
+        <field name="income_service_seed_code">3.01.01.03</field>
+        <field name="expense_service_seed_code">3.02.01.01</field>
+        <field name="expense_other_seed_code">3.02.01.01</field>
+    </record>
+    <record id="erc_intercompany_country_profile_mx" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.mx"/>
+        <field name="receivable_seed_code">105.01.01</field>
+        <field name="payable_seed_code">201.01.01</field>
+        <field name="income_production_seed_code">401.01.01</field>
+        <field name="income_service_seed_code">401.01.01</field>
+        <field name="expense_service_seed_code">501.01.01</field>
+        <field name="expense_other_seed_code">601.84.01</field>
+    </record>
+    <record id="erc_intercompany_country_profile_ca" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.ca"/>
+        <field name="receivable_seed_code">112100</field>
+        <field name="payable_seed_code">221110</field>
+        <field name="income_production_seed_code">411000</field>
+        <field name="income_service_seed_code">411200</field>
+        <field name="expense_service_seed_code">512207</field>
+        <field name="expense_other_seed_code">511110</field>
+    </record>
+    <record id="erc_intercompany_country_profile_ar" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.ar"/>
+        <field name="receivable_seed_code">1.1.3.01.010</field>
+        <field name="payable_seed_code">2.1.1.01.010</field>
+        <field name="income_production_seed_code">4.1.1.01.010</field>
+        <field name="income_service_seed_code">4.1.1.01.020</field>
+        <field name="expense_service_seed_code">5.1.2.01.090</field>
+        <field name="expense_other_seed_code">5.3.1.01.030</field>
+    </record>
+    <record id="erc_intercompany_country_profile_cl" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.cl"/>
+        <field name="receivable_seed_code">110310</field>
+        <field name="payable_seed_code">210210</field>
+        <field name="income_production_seed_code">310115</field>
+        <field name="income_service_seed_code">310120</field>
+        <field name="expense_service_seed_code">410160</field>
+        <field name="expense_other_seed_code">410165</field>
+    </record>
+    <record id="erc_intercompany_country_profile_co" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.co"/>
+        <field name="receivable_seed_code">130500</field>
+        <field name="payable_seed_code">220500</field>
+        <field name="income_production_seed_code">420500</field>
+        <field name="income_service_seed_code">416500</field>
+        <field name="expense_service_seed_code">514500</field>
+        <field name="expense_other_seed_code">519500</field>
+    </record>
+    <record id="erc_intercompany_country_profile_pe" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.pe"/>
+        <field name="receivable_seed_code">1211</field>
+        <field name="payable_seed_code">4211</field>
+        <field name="income_production_seed_code">70111</field>
+        <field name="income_service_seed_code">70311</field>
+        <field name="expense_service_seed_code">6341</field>
+        <field name="expense_other_seed_code">6592</field>
+    </record>
+    <record id="erc_intercompany_country_profile_uy" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.uy"/>
+        <field name="receivable_seed_code">11300</field>
+        <field name="payable_seed_code">21100</field>
+        <field name="income_production_seed_code">4100</field>
+        <field name="income_service_seed_code">4100</field>
+        <field name="expense_service_seed_code">51071</field>
+        <field name="expense_other_seed_code">5100</field>
+    </record>
+    <record id="erc_intercompany_country_profile_uk" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.uk"/>
+        <field name="receivable_seed_code">110000</field>
+        <field name="payable_seed_code">210000</field>
+        <field name="income_production_seed_code">400000</field>
+        <field name="income_service_seed_code">400000</field>
+        <field name="expense_service_seed_code">712000</field>
+        <field name="expense_other_seed_code">701000</field>
+    </record>
+    <record id="erc_intercompany_country_profile_ie" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.ie"/>
+        <field name="receivable_seed_code">2100</field>
+        <field name="payable_seed_code">34</field>
+        <field name="income_production_seed_code">70</field>
+        <field name="income_service_seed_code">70</field>
+        <field name="expense_service_seed_code">61</field>
+        <field name="expense_other_seed_code">642</field>
+    </record>
+    <record id="erc_intercompany_country_profile_fr" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.fr"/>
+        <field name="receivable_seed_code">413000</field>
+        <field name="payable_seed_code">403000</field>
+        <field name="income_production_seed_code">701000</field>
+        <field name="income_service_seed_code">706000</field>
+        <field name="expense_service_seed_code">604000</field>
+        <field name="expense_other_seed_code">623800</field>
+    </record>
+    <record id="erc_intercompany_country_profile_de" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.de"/>
+        <field name="receivable_seed_code">1200</field>
+        <field name="payable_seed_code">1600</field>
+        <field name="income_production_seed_code">4000</field>
+        <field name="income_service_seed_code">4320</field>
+        <field name="expense_service_seed_code">5900</field>
+        <field name="expense_other_seed_code">6300</field>
+    </record>
+    <record id="erc_intercompany_country_profile_nl" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.nl"/>
+        <field name="receivable_seed_code">1100</field>
+        <field name="payable_seed_code">1300</field>
+        <field name="income_production_seed_code">80011</field>
+        <field name="income_service_seed_code">8005</field>
+        <field name="expense_service_seed_code">4111</field>
+        <field name="expense_other_seed_code">4690</field>
+    </record>
+    <record id="erc_intercompany_country_profile_lu" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.lu"/>
+        <field name="receivable_seed_code">4011</field>
+        <field name="payable_seed_code">44111</field>
+        <field name="income_production_seed_code">7023</field>
+        <field name="income_service_seed_code">703001</field>
+        <field name="expense_service_seed_code">60814</field>
+        <field name="expense_other_seed_code">6188</field>
+    </record>
+    <record id="erc_intercompany_country_profile_ch" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.ch"/>
+        <field name="receivable_seed_code">1100</field>
+        <field name="payable_seed_code">2000</field>
+        <field name="income_production_seed_code">3000</field>
+        <field name="income_service_seed_code">3400</field>
+        <field name="expense_service_seed_code">4400</field>
+        <field name="expense_other_seed_code">5800</field>
+    </record>
+    <record id="erc_intercompany_country_profile_at" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.at"/>
+        <field name="receivable_seed_code">2000</field>
+        <field name="payable_seed_code">3300</field>
+        <field name="income_production_seed_code">4000</field>
+        <field name="income_service_seed_code">4000</field>
+        <field name="expense_service_seed_code">5810</field>
+        <field name="expense_other_seed_code">7890</field>
+    </record>
+    <record id="erc_intercompany_country_profile_dk" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.dk"/>
+        <field name="receivable_seed_code">6190</field>
+        <field name="payable_seed_code">7440</field>
+        <field name="income_production_seed_code">1050</field>
+        <field name="income_service_seed_code">1010</field>
+        <field name="expense_service_seed_code">2160</field>
+        <field name="expense_other_seed_code">1801</field>
+    </record>
+    <record id="erc_intercompany_country_profile_se" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.se"/>
+        <field name="receivable_seed_code">1510</field>
+        <field name="payable_seed_code">2440</field>
+        <field name="income_production_seed_code">30011</field>
+        <field name="income_service_seed_code">3300</field>
+        <field name="expense_service_seed_code">6540</field>
+        <field name="expense_other_seed_code">6991</field>
+    </record>
+    <record id="erc_intercompany_country_profile_no" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.no"/>
+        <field name="receivable_seed_code">1500</field>
+        <field name="payable_seed_code">2400</field>
+        <field name="income_production_seed_code">3010</field>
+        <field name="income_service_seed_code">3120</field>
+        <field name="expense_service_seed_code">4500</field>
+        <field name="expense_other_seed_code">6790</field>
+    </record>
+    <record id="erc_intercompany_country_profile_fi" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.fi"/>
+        <field name="receivable_seed_code">1601</field>
+        <field name="payable_seed_code">2671</field>
+        <field name="income_production_seed_code">3330</field>
+        <field name="income_service_seed_code">3200</field>
+        <field name="expense_service_seed_code">7730</field>
+        <field name="expense_other_seed_code">8430</field>
+    </record>
+    <record id="erc_intercompany_country_profile_pl" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.pl"/>
+        <field name="receivable_seed_code">20.000.100</field>
+        <field name="payable_seed_code">21.000.100</field>
+        <field name="income_production_seed_code">70.000.100</field>
+        <field name="income_service_seed_code">70.000.300</field>
+        <field name="expense_service_seed_code">40.020.700</field>
+        <field name="expense_other_seed_code">40.010.900</field>
+    </record>
+    <record id="erc_intercompany_country_profile_cz" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.cz"/>
+        <field name="receivable_seed_code">311000</field>
+        <field name="payable_seed_code">321000</field>
+        <field name="income_production_seed_code">604100</field>
+        <field name="income_service_seed_code">602000</field>
+        <field name="expense_service_seed_code">511000</field>
+        <field name="expense_other_seed_code">503000</field>
+    </record>
+    <record id="erc_intercompany_country_profile_hu" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.hu"/>
+        <field name="receivable_seed_code">311</field>
+        <field name="payable_seed_code">454</field>
+        <field name="income_production_seed_code">911</field>
+        <field name="income_service_seed_code">9687</field>
+        <field name="expense_service_seed_code">524</field>
+        <field name="expense_other_seed_code">539</field>
+    </record>
+    <record id="erc_intercompany_country_profile_ro" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.ro"/>
+        <field name="receivable_seed_code">4111</field>
+        <field name="payable_seed_code">4011</field>
+        <field name="income_production_seed_code">7015</field>
+        <field name="income_service_seed_code">704</field>
+        <field name="expense_service_seed_code">611</field>
+        <field name="expense_other_seed_code">65881</field>
+    </record>
+    <record id="erc_intercompany_country_profile_gr" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.gr"/>
+        <field name="receivable_seed_code">30.01.01.01</field>
+        <field name="payable_seed_code">50.01.01</field>
+        <field name="income_production_seed_code">70.03.01</field>
+        <field name="income_service_seed_code">70.01.01</field>
+        <field name="expense_service_seed_code">64.01.01.01</field>
+        <field name="expense_other_seed_code">60.03.02</field>
+    </record>
+    <record id="erc_intercompany_country_profile_tr" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.tr"/>
+        <field name="receivable_seed_code">120</field>
+        <field name="payable_seed_code">320</field>
+        <field name="income_production_seed_code">600</field>
+        <field name="income_service_seed_code">600</field>
+        <field name="expense_service_seed_code">622</field>
+        <field name="expense_other_seed_code">632</field>
+    </record>
+    <record id="erc_intercompany_country_profile_sa" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.sa"/>
+        <field name="receivable_seed_code">102011</field>
+        <field name="payable_seed_code">201002</field>
+        <field name="income_production_seed_code">500001</field>
+        <field name="income_service_seed_code">500003</field>
+        <field name="expense_service_seed_code">400008</field>
+        <field name="expense_other_seed_code">400012</field>
+    </record>
+    <record id="erc_intercompany_country_profile_ae" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.ae"/>
+        <field name="receivable_seed_code">102011</field>
+        <field name="payable_seed_code">201002</field>
+        <field name="income_production_seed_code">500001</field>
+        <field name="income_service_seed_code">500003</field>
+        <field name="expense_service_seed_code">400008</field>
+        <field name="expense_other_seed_code">400012</field>
+    </record>
+    <record id="erc_intercompany_country_profile_qa" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.qa"/>
+        <field name="receivable_seed_code">100201</field>
+        <field name="payable_seed_code">200102</field>
+        <field name="income_production_seed_code">400101</field>
+        <field name="income_service_seed_code">400104</field>
+        <field name="expense_service_seed_code">500202</field>
+        <field name="expense_other_seed_code">500308</field>
+    </record>
+    <record id="erc_intercompany_country_profile_om" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.om"/>
+        <field name="receivable_seed_code">100201</field>
+        <field name="payable_seed_code">200102</field>
+        <field name="income_production_seed_code">400101</field>
+        <field name="income_service_seed_code">400104</field>
+        <field name="expense_service_seed_code">500202</field>
+        <field name="expense_other_seed_code">500308</field>
+    </record>
+    <record id="erc_intercompany_country_profile_bh" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.bh"/>
+        <field name="receivable_seed_code">100201</field>
+        <field name="payable_seed_code">200102</field>
+        <field name="income_production_seed_code">400101</field>
+        <field name="income_service_seed_code">400104</field>
+        <field name="expense_service_seed_code">500202</field>
+        <field name="expense_other_seed_code">500308</field>
+    </record>
+    <record id="erc_intercompany_country_profile_eg" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.eg"/>
+        <field name="receivable_seed_code">102011</field>
+        <field name="payable_seed_code">201002</field>
+        <field name="income_production_seed_code">500001</field>
+        <field name="income_service_seed_code">500003</field>
+        <field name="expense_service_seed_code">400008</field>
+        <field name="expense_other_seed_code">400012</field>
+    </record>
+    <record id="erc_intercompany_country_profile_ma" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.ma"/>
+        <field name="receivable_seed_code">3425</field>
+        <field name="payable_seed_code">4415</field>
+        <field name="income_production_seed_code">7111</field>
+        <field name="income_service_seed_code">71243</field>
+        <field name="expense_service_seed_code">61331</field>
+        <field name="expense_other_seed_code">61318</field>
+    </record>
+    <record id="erc_intercompany_country_profile_dz" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.dz"/>
+        <field name="receivable_seed_code">413</field>
+        <field name="payable_seed_code">403</field>
+        <field name="income_production_seed_code">700</field>
+        <field name="income_service_seed_code">706</field>
+        <field name="expense_service_seed_code">615</field>
+        <field name="expense_other_seed_code">602</field>
+    </record>
+    <record id="erc_intercompany_country_profile_in" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.in"/>
+        <field name="receivable_seed_code">10040</field>
+        <field name="payable_seed_code">11211</field>
+        <field name="income_production_seed_code">20011</field>
+        <field name="income_service_seed_code">20021</field>
+        <field name="expense_service_seed_code">2112</field>
+        <field name="expense_other_seed_code">300002</field>
+    </record>
+    <record id="erc_intercompany_country_profile_cn" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.cn"/>
+        <field name="receivable_seed_code">1122</field>
+        <field name="payable_seed_code">2202</field>
+        <field name="income_production_seed_code">5001</field>
+        <field name="income_service_seed_code">6021</field>
+        <field name="expense_service_seed_code">4403</field>
+        <field name="expense_other_seed_code">5402</field>
+    </record>
+    <record id="erc_intercompany_country_profile_jp" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.jp"/>
+        <field name="receivable_seed_code">126000</field>
+        <field name="payable_seed_code">220000</field>
+        <field name="income_production_seed_code">410000</field>
+        <field name="income_service_seed_code">410000</field>
+        <field name="expense_service_seed_code">510000</field>
+        <field name="expense_other_seed_code">513000</field>
+    </record>
+    <record id="erc_intercompany_country_profile_kr" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.kr"/>
+        <field name="receivable_seed_code">111301</field>
+        <field name="payable_seed_code">212001</field>
+        <field name="income_production_seed_code">410001</field>
+        <field name="income_service_seed_code">410001</field>
+        <field name="expense_service_seed_code">510001</field>
+        <field name="expense_other_seed_code">610013</field>
+    </record>
+    <record id="erc_intercompany_country_profile_tw" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.tw"/>
+        <field name="receivable_seed_code">1151</field>
+        <field name="payable_seed_code">2151</field>
+        <field name="income_production_seed_code">4111</field>
+        <field name="income_service_seed_code">4171</field>
+        <field name="expense_service_seed_code">5501</field>
+        <field name="expense_other_seed_code">5601</field>
+    </record>
+    <record id="erc_intercompany_country_profile_sg" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.sg"/>
+        <field name="receivable_seed_code">100010</field>
+        <field name="payable_seed_code">200010</field>
+        <field name="income_production_seed_code">300004</field>
+        <field name="income_service_seed_code">300005</field>
+        <field name="expense_service_seed_code">501021</field>
+        <field name="expense_other_seed_code">501017</field>
+    </record>
+    <record id="erc_intercompany_country_profile_my" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.my"/>
+        <field name="receivable_seed_code">1240</field>
+        <field name="payable_seed_code">2211</field>
+        <field name="income_production_seed_code">41</field>
+        <field name="income_service_seed_code">41</field>
+        <field name="expense_service_seed_code">5234</field>
+        <field name="expense_other_seed_code">5105</field>
+    </record>
+    <record id="erc_intercompany_country_profile_au" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.au"/>
+        <field name="receivable_seed_code">11200</field>
+        <field name="payable_seed_code">21200</field>
+        <field name="income_production_seed_code">41110</field>
+        <field name="income_service_seed_code">41120</field>
+        <field name="expense_service_seed_code">62200</field>
+        <field name="expense_other_seed_code">57000</field>
+    </record>
+    <record id="erc_intercompany_country_profile_nz" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.nz"/>
+        <field name="receivable_seed_code">11200</field>
+        <field name="payable_seed_code">21200</field>
+        <field name="income_production_seed_code">41110</field>
+        <field name="income_service_seed_code">41120</field>
+        <field name="expense_service_seed_code">62200</field>
+        <field name="expense_other_seed_code">57000</field>
+    </record>
+    <record id="erc_intercompany_country_profile_za" model="erc.intercompany.country.profile">
+        <field name="country_id" ref="base.za"/>
+        <field name="receivable_seed_code">110010</field>
+        <field name="payable_seed_code">220010</field>
+        <field name="income_production_seed_code">500010</field>
+        <field name="income_service_seed_code">500010</field>
+        <field name="expense_service_seed_code">610140</field>
+        <field name="expense_other_seed_code">610290</field>
+    </record>
+</odoo>

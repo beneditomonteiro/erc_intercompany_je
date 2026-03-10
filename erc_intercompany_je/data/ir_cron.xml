@@ -1,0 +1,22 @@
+<odoo noupdate="1">
+    <record id="ir_cron_daily_intercompany_account_setup" model="ir.cron">
+        <field name="name">Intercompany Account Setup (Daily)</field>
+        <field name="active">True</field>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="model_id" ref="base.model_res_company"/>
+        <field name="state">code</field>
+        <field name="code">model._cron_setup_intercompany_accounts_daily()</field>
+    </record>
+    <record id="ir_cron_daily_intercompany_order_journal_realign" model="ir.cron">
+        <field name="name">Intercompany Order Journal Realignment (Daily)</field>
+        <field name="active">True</field>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="model_id" ref="base.model_res_company"/>
+        <field name="state">code</field>
+        <field name="code">model._cron_realign_intercompany_order_journals()</field>
+    </record>
+</odoo>

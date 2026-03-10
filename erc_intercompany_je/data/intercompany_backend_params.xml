@@ -1,0 +1,42 @@
+<odoo noupdate="0">
+    <record id="erc_intercompany_param_required_module" model="ir.config_parameter">
+        <field name="key">erc_intercompany_je.required_intercompany_module</field>
+        <field name="value">account_inter_company_rules</field>
+    </record>
+    <record id="erc_intercompany_param_require_rules_on_install" model="ir.config_parameter">
+        <field name="key">erc_intercompany_je.require_rules_on_install</field>
+        <field name="value">1</field>
+    </record>
+    <record id="erc_intercompany_param_require_rules_runtime" model="ir.config_parameter">
+        <field name="key">erc_intercompany_je.require_rules_runtime</field>
+        <field name="value">1</field>
+    </record>
+    <record id="erc_intercompany_param_autosetup_on_install" model="ir.config_parameter">
+        <field name="key">erc_intercompany_je.autosetup_on_install</field>
+        <field name="value">1</field>
+    </record>
+    <record id="erc_intercompany_param_autosetup_on_upgrade" model="ir.config_parameter">
+        <field name="key">erc_intercompany_je.autosetup_on_upgrade</field>
+        <field name="value">1</field>
+    </record>
+    <record id="erc_intercompany_param_autosetup_cron_enabled" model="ir.config_parameter">
+        <field name="key">erc_intercompany_je.autosetup_cron_enabled</field>
+        <field name="value">1</field>
+    </record>
+    <record id="erc_intercompany_param_journal_autofill_defaults" model="ir.config_parameter">
+        <field name="key">erc_intercompany_je.journal_autofill_defaults</field>
+        <field name="value">1</field>
+    </record>
+    <record id="erc_intercompany_param_journal_mirror_use_documents" model="ir.config_parameter">
+        <field name="key">erc_intercompany_je.journal_mirror_use_documents</field>
+        <field name="value">1</field>
+    </record>
+    <record id="erc_intercompany_param_journal_force_use_documents" model="ir.config_parameter">
+        <field name="key">erc_intercompany_je.journal_force_use_documents</field>
+        <field name="value">1</field>
+    </record>
+    <record id="erc_intercompany_param_journal_control_sequence" model="ir.config_parameter">
+        <field name="key">erc_intercompany_je.journal_control_sequence</field>
+        <field name="value">1</field>
+    </record>
+</odoo>

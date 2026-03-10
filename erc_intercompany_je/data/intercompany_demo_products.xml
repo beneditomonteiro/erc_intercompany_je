@@ -1,0 +1,70 @@
+<odoo noupdate="1">
+
+    <!-- ============================================================
+         Product 1: Goods Intercompany (Resale / Consumable)
+         Typical resale item — purchased from supplier, sold to IC partner.
+         Routes to ICS journal → Resale Sales IC account (seller)
+         Routes to ICP journal → COGS IC account (buyer)
+         ============================================================ -->
+    <record id="product_tmpl_ic_goods" model="product.template">
+        <field name="name">Goods Intercompany</field>
+        <field name="type">consu</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+
+        <field name="list_price">2.00</field>
+        <field name="sale_ok" eval="True"/>
+        <field name="purchase_ok" eval="True"/>
+    </record>
+
+    <!-- ============================================================
+         Product 2: Services Intercompany (Service type)
+         Consulting, maintenance, or professional services.
+         Routes to ISS journal → Services Sales IC account (seller)
+         Routes to ICE journal → Services Expenses IC account (buyer)
+         ============================================================ -->
+    <record id="product_tmpl_ic_services" model="product.template">
+        <field name="name">Services Intercompany</field>
+        <field name="type">service</field>
+        <field name="categ_id" ref="product.product_category_services"/>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+
+        <field name="list_price">3.00</field>
+        <field name="sale_ok" eval="True"/>
+        <field name="purchase_ok" eval="True"/>
+    </record>
+
+    <!-- ============================================================
+         Product 3: Product Intercompany (Manufactured — has BOM)
+         Finished good assembled in-house from raw materials.
+         Routes to ICS journal → Production Sales IC account (seller)
+         Routes to ICP journal → COGS IC account (buyer)
+         Note: BOM is created in intercompany_demo_bom.xml.
+         ============================================================ -->
+    <record id="product_tmpl_ic_product" model="product.template">
+        <field name="name">Product Intercompany</field>
+        <field name="type">consu</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+
+        <field name="list_price">1.00</field>
+        <field name="sale_ok" eval="True"/>
+        <field name="purchase_ok" eval="True"/>
+    </record>
+
+    <!-- ============================================================
+         Product 4: Material BOM for Product Intercompany (Component)
+         Raw material / component used in BOM. Not sold, only purchased.
+         ============================================================ -->
+    <record id="product_tmpl_ic_material" model="product.template">
+        <field name="name">Material BOM for Product Intercompany</field>
+        <field name="type">consu</field>
+        <field name="categ_id" ref="product.product_category_goods"/>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+
+        <field name="list_price">0.01</field>
+        <field name="sale_ok" eval="False"/>
+        <field name="purchase_ok" eval="True"/>
+    </record>
+
+</odoo>

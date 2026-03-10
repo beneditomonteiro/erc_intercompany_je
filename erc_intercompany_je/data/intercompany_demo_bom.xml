@@ -1,0 +1,24 @@
+<odoo noupdate="1">
+
+    <!-- ============================================================
+         Bill of Materials: Product Intercompany
+         1 x Material BOM → 1 x Product Intercompany
+
+         This BOM marks the product as "manufactured", which triggers
+         the Production Sales IC account instead of Resale on SO lines.
+
+         Requires: mrp module installed.
+         ============================================================ -->
+    <record id="bom_ic_product" model="mrp.bom">
+        <field name="product_tmpl_id" ref="product_tmpl_ic_product"/>
+        <field name="product_qty">1.0</field>
+        <field name="type">normal</field>
+    </record>
+    <record id="bom_line_ic_material" model="mrp.bom.line">
+        <field name="bom_id" ref="bom_ic_product"/>
+        <field name="product_id" search="[('product_tmpl_id', '=', ref('product_tmpl_ic_material'))]" model="product.product"/>
+        <field name="product_qty">1.0</field>
+        <field name="product_uom_id" ref="uom.product_uom_unit"/>
+    </record>
+
+</odoo>

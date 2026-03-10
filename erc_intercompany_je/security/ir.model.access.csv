@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_erc_intercompany_country_profile_manager,erc.intercompany.country.profile.manager,model_erc_intercompany_country_profile,account.group_account_manager,1,1,1,0
+access_erc_intercompany_country_profile_system,erc.intercompany.country.profile.system,model_erc_intercompany_country_profile,base.group_system,1,1,1,1

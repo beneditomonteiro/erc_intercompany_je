@@ -1,0 +1,149 @@
+<odoo>
+
+    <!-- Partner Form View -->
+    <record id="view_partner_property_form_inertcompany" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.intercompany</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form"/>
+        <field name="arch" type="xml">
+            <field name="property_account_payable_id" position="after">
+                <field name="is_intercompany"/>
+                <field name="sale_intercompany_journal_id"
+                    invisible="not is_intercompany"
+                    required="is_intercompany"/>
+                <field name="purchase_intercompany_journal_id"
+                    invisible="not is_intercompany"
+                    required="is_intercompany"/>
+                <field name="intercompany_receivable_account_id"
+                    invisible="not is_intercompany"/>
+                <field name="intercompany_payable_account_id"
+                    invisible="not is_intercompany"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- Res Config Settings View -->
+    <record id="res_config_settings_view_form_intercompany_je" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.base.intercompany_je.setup</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='companies_setting']" position="after">
+                <setting id="intercompany_journal_display_setting"
+                    string="Intercompany Journal on Orders"
+                    company_dependent="1"
+                    help="Display Journal in Sale Orders and Purchase Orders.">
+                    <field name="is_intercompany_journal_display"/>
+                    <field name="interco_sale_journal_id"/>
+                    <field name="interco_service_sale_journal_id"/>
+                    <field name="interco_purchase_journal_id"/>
+                    <field name="interco_service_expense_journal_id"/>
+                </setting>
+                <setting id="intercompany_demo_products_setting"
+                    string="Intercompany Demo Products"
+                    help="Create example products (Goods, Services, Manufactured with BOM) to test intercompany journal routing.">
+                    <field name="intercompany_demo_products_installed"/>
+                    <div class="mt-2">
+                        <button name="action_install_intercompany_demo_products"
+                            type="object"
+                            string="Install Demo Products"
+                            class="btn-secondary"
+                            invisible="intercompany_demo_products_installed"/>
+                        <span class="text-success fw-bold"
+                            invisible="not intercompany_demo_products_installed">
+                            Demo products are installed.
+                        </span>
+                    </div>
+                </setting>
+                <setting id="intercompany_account_setup_setting"
+                    string="Intercompany Account Segregation"
+                    company_dependent="1"
+                    help="Analyze the installed chart of accounts and auto-create dedicated intercompany revenue, cost, expense, receivable, and payable accounts.">
+                    <field name="intercompany_enforce_accounts"/>
+                    <field name="intercompany_sync_partner_accounts"/>
+                    <div class="mt-3">
+                        <strong>Revenue Accounts (Seller)</strong>
+                    </div>
+                    <field name="intercompany_bom_production_account"/>
+                    <div class="text-muted small ms-4 mb-2"
+                        invisible="not intercompany_bom_production_account">
+                        Goods with a Bill of Materials (BOM) use the Production Income Account
+                        configured on the ICS journal, instead of the Default Income Account (Resale).
+                    </div>
+                    <field name="interco_income_production_account_id"/>
+                    <field name="interco_income_resale_account_id"/>
+                    <field name="interco_income_service_account_id"/>
+                    <div class="mt-3">
+                        <strong>Cost &amp; Expense Accounts (Buyer)</strong>
+                    </div>
+                    <field name="interco_expense_other_account_id"/>
+                    <field name="interco_expense_service_account_id"/>
+                    <div class="mt-3">
+                        <strong>AR / AP</strong>
+                    </div>
+                    <field name="interco_receivable_account_id"/>
+                    <field name="interco_payable_account_id"/>
+                    <div class="mt-4">
+                        <button name="action_show_intercompany_account_proposal"
+                            type="object"
+                            string="Analyze COA Proposal"
+                            class="btn-link"/>
+                    </div>
+                    <div class="mt-2">
+                        <button name="action_setup_intercompany_accounts"
+                            type="object"
+                            string="Analyze &amp; Auto-Create Accounts"
+                            class="btn-secondary"/>
+                    </div>
+                    <div class="mt-2">
+                        <button name="action_setup_intercompany_accounts_group"
+                            type="object"
+                            string="Setup For Company Group"
+                            class="btn-secondary"/>
+                    </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Sale Order Form View -->
+    <record id="view_order_form_intercompany" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.intercompany</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <field name="payment_term_id" position="after">
+                <field name="is_intercompany_journal_display" invisible="1"/>
+                <field name="journal_id" invisible="not is_intercompany_journal_display"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- Purchase Order Form View -->
+    <record id="purchase_order_form_intercompany" model="ir.ui.view">
+        <field name="name">purchase.order.form.inherit.intercompany</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <div name="reminder" position="after">
+                <field name="is_intercompany_journal_display" invisible="1"/>
+                <field name="journal_id" invisible="not is_intercompany_journal_display"/>
+            </div>
+        </field>
+    </record>
+
+    <!-- Account Journal Form View -->
+    <record id="view_account_journal_form_intercompany" model="ir.ui.view">
+        <field name="name">account.journal.form.inherit.intercompany</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='default_account_id'][last()]" position="after">
+                <field name="intercompany_production_account_id"
+                    invisible="type != 'sale'"
+                    groups="account.group_account_readonly"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

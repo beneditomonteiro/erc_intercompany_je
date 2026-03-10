@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="hg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#71639e"/>
+      <stop offset="100%" stop-color="#4facfe"/>
+    </linearGradient>
+    <filter id="s" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="480" rx="10" fill="#f4f5f8"/>
+
+  <!-- Header bar -->
+  <rect width="800" height="40" rx="10" fill="url(#hg)"/>
+  <rect y="10" width="800" height="30" fill="url(#hg)"/>
+  <text x="20" y="26" fill="white" font-size="12" font-weight="600" opacity="0.9">&#9776;  Settings  ›  Intercompany  ›  Country Profiles</text>
+
+  <!-- Title -->
+  <text x="400" y="76" text-anchor="middle" fill="#333" font-size="20" font-weight="700">50+ Country Localization Profiles</text>
+  <text x="400" y="96" text-anchor="middle" fill="#888" font-size="11">Account seed codes adapt automatically to each country's Chart of Accounts standard</text>
+
+  <!-- Globe icon area -->
+  <circle cx="400" cy="148" r="28" fill="#71639e" opacity="0.1"/>
+  <text x="400" y="157" text-anchor="middle" fill="#71639e" font-size="28">&#127760;</text>
+
+  <!-- Country grid - Row 1 -->
+  <rect x="30" y="185" width="145" height="44" rx="6" fill="white" filter="url(#s)"/>
+  <text x="46" y="201" fill="#333" font-size="15">&#127463;&#127479;</text>
+  <text x="68" y="202" fill="#333" font-size="11" font-weight="600">Brazil</text>
+  <text x="68" y="220" fill="#71639e" font-size="9" font-weight="700" font-family="'Courier New', monospace">3.01.01.01</text>
+
+  <rect x="185" y="185" width="145" height="44" rx="6" fill="white" filter="url(#s)"/>
+  <text x="201" y="201" fill="#333" font-size="15">&#127477;&#127481;</text>
+  <text x="223" y="202" fill="#333" font-size="11" font-weight="600">Portugal</text>
+  <text x="223" y="220" fill="#71639e" font-size="9" font-weight="700" font-family="'Courier New', monospace">7111</text>
+
+  <rect x="340" y="185" width="145" height="44" rx="6" fill="white" filter="url(#s)"/>
+  <text x="356" y="201" fill="#333" font-size="15">&#127462;&#127476;</text>
+  <text x="378" y="202" fill="#333" font-size="11" font-weight="600">Angola</text>
+  <text x="378" y="220" fill="#71639e" font-size="9" font-weight="700" font-family="'Courier New', monospace">7111</text>
+
+  <rect x="495" y="185" width="145" height="44" rx="6" fill="white" filter="url(#s)"/>
+  <text x="511" y="201" fill="#333" font-size="15">&#127482;&#127480;</text>
+  <text x="533" y="202" fill="#333" font-size="11" font-weight="600">United States</text>
+  <text x="533" y="220" fill="#71639e" font-size="9" font-weight="700" font-family="'Courier New', monospace">40000001</text>
+
+  <rect x="650" y="185" width="120" height="44" rx="6" fill="white" filter="url(#s)"/>
+  <text x="666" y="201" fill="#333" font-size="15">&#127468;&#127463;</text>
+  <text x="688" y="202" fill="#333" font-size="11" font-weight="600">UK</text>
+  <text x="688" y="220" fill="#71639e" font-size="9" font-weight="700" font-family="'Courier New', monospace">4000</text>
+
+  <!-- Country grid - Row 2 -->
+  <rect x="30" y="240" width="145" height="44" rx="6" fill="white" filter="url(#s)"/>
+  <text x="46" y="256" fill="#333" font-size="15">&#127465;&#127466;</text>
+  <text x="68" y="257" fill="#333" font-size="11" font-weight="600">Germany</text>
+  <text x="68" y="275" fill="#71639e" font-size="9" font-weight="700" font-family="'Courier New', monospace">8000</text>
+
+  <rect x="185" y="240" width="145" height="44" rx="6" fill="white" filter="url(#s)"/>
+  <text x="201" y="256" fill="#333" font-size="15">&#127467;&#127479;</text>
+  <text x="223" y="257" fill="#333" font-size="11" font-weight="600">France</text>
+  <text x="223" y="275" fill="#71639e" font-size="9" font-weight="700" font-family="'Courier New', monospace">706100</text>
+
+  <rect x="340" y="240" width="145" height="44" rx="6" fill="white" filter="url(#s)"/>
+  <text x="356" y="256" fill="#333" font-size="15">&#127466;&#127480;</text>
+  <text x="378" y="257" fill="#333" font-size="11" font-weight="600">Spain</text>
+  <text x="378" y="275" fill="#71639e" font-size="9" font-weight="700" font-family="'Courier New', monospace">7000</text>
+
+  <rect x="495" y="240" width="145" height="44" rx="6" fill="white" filter="url(#s)"/>
+  <text x="511" y="256" fill="#333" font-size="15">&#127474;&#127485;</text>
+  <text x="533" y="257" fill="#333" font-size="11" font-weight="600">Mexico</text>
+  <text x="533" y="275" fill="#71639e" font-size="9" font-weight="700" font-family="'Courier New', monospace">401.01</text>
+
+  <rect x="650" y="240" width="120" height="44" rx="6" fill="white" filter="url(#s)"/>
+  <text x="666" y="256" fill="#333" font-size="15">&#127470;&#127481;</text>
+  <text x="688" y="257" fill="#333" font-size="11" font-weight="600">Italy</text>
+  <text x="688" y="275" fill="#71639e" font-size="9" font-weight="700" font-family="'Courier New', monospace">2500</text>
+
+  <!-- Country grid - Row 3 -->
+  <rect x="30" y="295" width="145" height="44" rx="6" fill="white" filter="url(#s)"/>
+  <text x="46" y="311" fill="#333" font-size="15">&#127464;&#127462;</text>
+  <text x="68" y="312" fill="#333" font-size="11" font-weight="600">Canada</text>
+  <text x="68" y="330" fill="#71639e" font-size="9" font-weight="700" font-family="'Courier New', monospace">40000001</text>
+
+  <rect x="185" y="295" width="145" height="44" rx="6" fill="white" filter="url(#s)"/>
+  <text x="201" y="311" fill="#333" font-size="15">&#127462;&#127479;</text>
+  <text x="223" y="312" fill="#333" font-size="11" font-weight="600">Argentina</text>
+  <text x="223" y="330" fill="#71639e" font-size="9" font-weight="700" font-family="'Courier New', monospace">4.1.1.01</text>
+
+  <rect x="340" y="295" width="145" height="44" rx="6" fill="white" filter="url(#s)"/>
+  <text x="356" y="311" fill="#333" font-size="15">&#127464;&#127473;</text>
+  <text x="378" y="312" fill="#333" font-size="11" font-weight="600">Chile</text>
+  <text x="378" y="330" fill="#71639e" font-size="9" font-weight="700" font-family="'Courier New', monospace">410001</text>
+
+  <rect x="495" y="295" width="145" height="44" rx="6" fill="white" filter="url(#s)"/>
+  <text x="511" y="311" fill="#333" font-size="15">&#127464;&#127476;</text>
+  <text x="533" y="312" fill="#333" font-size="11" font-weight="600">Colombia</text>
+  <text x="533" y="330" fill="#71639e" font-size="9" font-weight="700" font-family="'Courier New', monospace">4135</text>
+
+  <rect x="650" y="295" width="120" height="44" rx="6" fill="white" filter="url(#s)"/>
+  <text x="666" y="311" fill="#333" font-size="15">&#127462;&#127466;</text>
+  <text x="688" y="312" fill="#333" font-size="11" font-weight="600">UAE</text>
+  <text x="688" y="330" fill="#71639e" font-size="9" font-weight="700" font-family="'Courier New', monospace">40000001</text>
+
+  <!-- +more badge -->
+  <rect x="300" y="355" width="200" height="32" rx="16" fill="#71639e"/>
+  <text x="400" y="376" text-anchor="middle" fill="white" font-size="13" font-weight="700">+ 38 more countries</text>
+
+  <!-- Bottom explanation -->
+  <rect x="60" y="405" width="680" height="56" rx="8" fill="white" filter="url(#s)"/>
+  <text x="80" y="426" fill="#333" font-size="11" font-weight="600">How it works:</text>
+  <text x="80" y="444" fill="#666" font-size="10">The module reads your company's fiscal country and generates GL account codes matching the local COA standard.</text>
+  <text x="80" y="456" fill="#666" font-size="10">Numeric codes (US: 40000001), dotted codes (BR: 3.01.01.01), and short codes (PT: 7111) — all handled automatically.</text>
+</svg>

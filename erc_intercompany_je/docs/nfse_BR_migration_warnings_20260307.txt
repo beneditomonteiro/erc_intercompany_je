@@ -1,0 +1,92 @@
+2026-03-07 13:52:31,122 123520 WARNING nfse_BR py.warnings: /opt/odoo19/odoo/odoo/orm/fields.py:845: UserWarning: Field 'res.company.city_id' in dependency of res.company.l10n_br_nfse_city_name should be searchable. This is necessary to determine which records to recompute when res.city.name is modified. You should either make the field searchable, or simplify the field dependency.
+  File "/opt/odoo19/odoo/odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "/opt/odoo19/odoo/odoo/cli/command.py", line 133, in main
+    command().run(args)
+  File "/opt/odoo19/odoo/odoo/cli/server.py", line 127, in run
+    main(args)
+  File "/opt/odoo19/odoo/odoo/cli/server.py", line 118, in main
+    rc = server.start(preload=config['db_name'], stop=stop)
+  File "/opt/odoo19/odoo/odoo/service/server.py", line 1596, in start
+    rc = server.run(preload, stop)
+  File "/opt/odoo19/odoo/odoo/service/server.py", line 668, in run
+    rc = preload_registries(preload)
+  File "/opt/odoo19/odoo/odoo/service/server.py", line 1510, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module, install_modules=config['init'], upgrade_modules=config['update'], reinit_modules=config['reinit'])
+  File "/opt/odoo19/odoo/odoo/tools/func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "/opt/odoo19/odoo/odoo/orm/registry.py", line 199, in new
+    load_modules(
+  File "/opt/odoo19/odoo/odoo/modules/loading.py", line 520, in load_modules
+    vacuum_cron._trigger(at=datetime.datetime.now() + datetime.timedelta(minutes=1))
+  File "/opt/odoo19/odoo/odoo/addons/base/models/ir_cron.py", line 762, in _trigger
+    return self._trigger_list(at_list)
+  File "/opt/odoo19/odoo/odoo/addons/base/models/ir_cron.py", line 781, in _trigger_list
+    triggers = self.env['ir.cron.trigger'].sudo().create([
+  File "/opt/odoo19/odoo/odoo/orm/decorators.py", line 365, in create
+    return method(self, vals_list)
+  File "/opt/odoo19/odoo/odoo/orm/models.py", line 4709, in create
+    records = self._create(data_list)
+  File "/opt/odoo19/odoo/odoo/orm/models.py", line 4931, in _create
+    records.modified(self._fields, create=True)
+  File "/opt/odoo19/odoo/odoo/orm/models.py", line 6802, in modified
+    todo = [self._modified([self._fields[fname] for fname in fnames], create)]
+  File "/opt/odoo19/odoo/odoo/orm/models.py", line 6854, in _modified
+    tree = self.pool.get_trigger_tree(fields, select=select)
+  File "/opt/odoo19/odoo/odoo/orm/registry.py", line 565, in get_trigger_tree
+    trees = [
+  File "/opt/odoo19/odoo/odoo/orm/registry.py", line 568, in <listcomp>
+    if field in self._field_triggers
+  File "/usr/lib/python3.10/functools.py", line 981, in __get__
+    val = self.func(instance)
+  File "/opt/odoo19/odoo/odoo/orm/registry.py", line 660, in _field_triggers
+    dependencies = list(field.resolve_depends(self))
+  File "/opt/odoo19/odoo/odoo/orm/fields.py", line 845, in resolve_depends
+    warnings.warn(
+ 
+2026-03-07 13:52:31,122 123520 WARNING nfse_BR py.warnings: /opt/odoo19/odoo/odoo/orm/fields.py:845: UserWarning: Field 'res.company.state_id' in dependency of res.company.l10n_br_nfse_state_code should be searchable. This is necessary to determine which records to recompute when res.country.state.code is modified. You should either make the field searchable, or simplify the field dependency.
+  File "/opt/odoo19/odoo/odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "/opt/odoo19/odoo/odoo/cli/command.py", line 133, in main
+    command().run(args)
+  File "/opt/odoo19/odoo/odoo/cli/server.py", line 127, in run
+    main(args)
+  File "/opt/odoo19/odoo/odoo/cli/server.py", line 118, in main
+    rc = server.start(preload=config['db_name'], stop=stop)
+  File "/opt/odoo19/odoo/odoo/service/server.py", line 1596, in start
+    rc = server.run(preload, stop)
+  File "/opt/odoo19/odoo/odoo/service/server.py", line 668, in run
+    rc = preload_registries(preload)
+  File "/opt/odoo19/odoo/odoo/service/server.py", line 1510, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module, install_modules=config['init'], upgrade_modules=config['update'], reinit_modules=config['reinit'])
+  File "/opt/odoo19/odoo/odoo/tools/func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "/opt/odoo19/odoo/odoo/orm/registry.py", line 199, in new
+    load_modules(
+  File "/opt/odoo19/odoo/odoo/modules/loading.py", line 520, in load_modules
+    vacuum_cron._trigger(at=datetime.datetime.now() + datetime.timedelta(minutes=1))
+  File "/opt/odoo19/odoo/odoo/addons/base/models/ir_cron.py", line 762, in _trigger
+    return self._trigger_list(at_list)
+  File "/opt/odoo19/odoo/odoo/addons/base/models/ir_cron.py", line 781, in _trigger_list
+    triggers = self.env['ir.cron.trigger'].sudo().create([
+  File "/opt/odoo19/odoo/odoo/orm/decorators.py", line 365, in create
+    return method(self, vals_list)
+  File "/opt/odoo19/odoo/odoo/orm/models.py", line 4709, in create
+    records = self._create(data_list)
+  File "/opt/odoo19/odoo/odoo/orm/models.py", line 4931, in _create
+    records.modified(self._fields, create=True)
+  File "/opt/odoo19/odoo/odoo/orm/models.py", line 6802, in modified
+    todo = [self._modified([self._fields[fname] for fname in fnames], create)]
+  File "/opt/odoo19/odoo/odoo/orm/models.py", line 6854, in _modified
+    tree = self.pool.get_trigger_tree(fields, select=select)
+  File "/opt/odoo19/odoo/odoo/orm/registry.py", line 565, in get_trigger_tree
+    trees = [
+  File "/opt/odoo19/odoo/odoo/orm/registry.py", line 568, in <listcomp>
+    if field in self._field_triggers
+  File "/usr/lib/python3.10/functools.py", line 981, in __get__
+    val = self.func(instance)
+  File "/opt/odoo19/odoo/odoo/orm/registry.py", line 660, in _field_triggers
+    dependencies = list(field.resolve_depends(self))
+  File "/opt/odoo19/odoo/odoo/orm/fields.py", line 845, in resolve_depends
+    warnings.warn(
+ 

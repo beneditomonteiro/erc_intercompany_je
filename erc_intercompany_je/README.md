@@ -64,7 +64,7 @@ One-click install of example products (Goods, Services, Manufactured with BOM) t
 
 Try the module on our demo instance — no installation required.
 
-- **URL:** [erc-implementors.com/web/database/selector](https://erc-implementors.com/web/database/selector)
+- **URL:** [erc-implementors.me/web/database/selector](https://erc-implementors.me/web/database/selector)
 - **Database:** `intercompany_je_us`
 - **Login:** `ERC_ME`
 - **Password:** `demo`

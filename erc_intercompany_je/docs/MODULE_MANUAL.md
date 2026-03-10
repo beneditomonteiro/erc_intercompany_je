@@ -282,7 +282,7 @@ A public demo instance is available for testing all module features without inst
 
 | Field | Value |
 |-------|-------|
-| URL | [erc-implementors.com/web/database/selector](https://erc-implementors.com/web/database/selector) |
+| URL | [erc-implementors.me/web/database/selector](https://erc-implementors.me/web/database/selector) |
 | Database | `intercompany_je_us` |
 | Login | `ERC_ME` |
 | Password | `demo` |

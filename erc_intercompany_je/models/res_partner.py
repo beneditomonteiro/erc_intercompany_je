@@ -29,6 +29,30 @@ class ResPartner(models.Model):
         copy=False,
     )
 
+    def _check_company(self, fnames=None):
+        """Allow IC accounts on shared partners (company_id=False).
+
+        When a partner is flagged as intercompany, its AR/AP property
+        accounts intentionally belong to a specific company.  Odoo core
+        raises a UserError because the partner itself has no company_id.
+        We skip that check when the write originates from our IC sync.
+        """
+        if self.env.context.get("skip_intercompany_company_check"):
+            ic_fields = {
+                "property_account_receivable_id",
+                "property_account_payable_id",
+            }
+            if fnames is not None:
+                fnames = [f for f in fnames if f not in ic_fields]
+                if not fnames:
+                    return
+            else:
+                fnames = [
+                    f for f in self._fields
+                    if f not in ic_fields
+                ]
+        return super()._check_company(fnames=fnames)
+
     def _apply_intercompany_partner_accounts(self):
         if self.env.context.get("skip_intercompany_partner_account_sync"):
             return
@@ -72,7 +96,8 @@ class ResPartner(models.Model):
                 ).write(partner_vals)
             if company_vals:
                 partner_in_company.with_context(
-                    skip_intercompany_partner_account_sync=True
+                    skip_intercompany_partner_account_sync=True,
+                    skip_intercompany_company_check=True,
                 ).write(company_vals)
 
     @api.model_create_multi

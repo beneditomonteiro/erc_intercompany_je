@@ -1,18 +1,777 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#   * erc_intercompany_je
+# 	* erc_intercompany_je
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 19.0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-08 15:56+0000\n"
-"PO-Revision-Date: 2026-03-08 15:56+0000\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
 
-"Language: ${lang}\n"
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "%(code)s %(old)s -> %(new)s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "%(code)s not removed (has %(count)s journal items)"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "%(code)s not removed (no replacement found for %(field)s)"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "%(company)s: missing %(items)s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "%(label)s -> already configured (%(code)s)"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "%(label)s -> create %(new_code)s (from template %(tmpl)s)"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "%(label)s -> link existing %(code)s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "%(old)s -> %(new)s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "%s: configured"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model_terms:ir.ui.view,arch_db:erc_intercompany_je.res_config_settings_view_form_intercompany_je
+msgid ""
+"<span class=\"text-success fw-bold\" invisible=\"not intercompany_demo_products_installed\">\n"
+"                            Demo products are installed.\n"
+"                        </span>"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model_terms:ir.ui.view,arch_db:erc_intercompany_je.res_config_settings_view_form_intercompany_je
+msgid "<strong>AR / AP</strong>"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model_terms:ir.ui.view,arch_db:erc_intercompany_je.res_config_settings_view_form_intercompany_je
+msgid "<strong>Cost &amp; Expense Accounts (Buyer)</strong>"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model_terms:ir.ui.view,arch_db:erc_intercompany_je.res_config_settings_view_form_intercompany_je
+msgid "<strong>Revenue Accounts (Seller)</strong>"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Aligned labels: %s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "All intercompany accounts were already configured."
+msgstr "所有公司间科目已配置完毕。"
+
+#. module: erc_intercompany_je
+#: model_terms:ir.ui.view,arch_db:erc_intercompany_je.res_config_settings_view_form_intercompany_je
+msgid "Analyze & Auto-Create Accounts"
+msgstr "分析并自动创建科目"
+
+#. module: erc_intercompany_je
+#: model_terms:ir.ui.view,arch_db:erc_intercompany_je.res_config_settings_view_form_intercompany_je
+msgid "Analyze COA Proposal"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model_terms:ir.ui.view,arch_db:erc_intercompany_je.res_config_settings_view_form_intercompany_je
+msgid ""
+"Analyze the installed chart of accounts and auto-create dedicated "
+"intercompany revenue, cost, expense, receivable, and payable accounts."
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_company__intercompany_bom_production_account
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__intercompany_bom_production_account
+msgid "BOM Products Use Production Revenue Account"
+msgstr "BOM产品使用生产收入科目"
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "COA Style: %(style)s / Typical Code Length: %(length)s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Cannot locate module path."
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Clientes Intercompany"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model,name:erc_intercompany_je.model_res_company
+msgid "Companies"
+msgstr "公司"
+
+#. module: erc_intercompany_je
+#: model:ir.model,name:erc_intercompany_je.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Configured journals: %s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model,name:erc_intercompany_je.model_res_partner
+msgid "Contact"
+msgstr "联系人"
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Cost of Goods Sold Intercompany"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_erc_intercompany_country_profile__country_id
+msgid "Country"
+msgstr "国家"
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Country profile seed active: %s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Country profile seed codes were applied."
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model_terms:ir.ui.view,arch_db:erc_intercompany_je.res_config_settings_view_form_intercompany_je
+msgid ""
+"Create example products (Goods, Services, Manufactured with BOM) to test "
+"intercompany journal routing."
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_erc_intercompany_country_profile__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Created journals: %s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_erc_intercompany_country_profile__create_date
+msgid "Created on"
+msgstr "创建日期"
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Created: %s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid ""
+"Created: Goods Intercompany, Services Intercompany, Product Intercompany "
+"(with BOM), Material BOM component."
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Custo das Mercadorias Vendidas Intercompany"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_account_journal__intercompany_production_account_id
+msgid "Default Production Income Account"
+msgstr "默认生产收入科目"
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Demo Products"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Demo Products Installed"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Despesas de Serviços Intercompany"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model_terms:ir.ui.view,arch_db:erc_intercompany_je.res_config_settings_view_form_intercompany_je
+msgid "Display Journal in Sale Orders and Purchase Orders."
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_account_journal__display_name
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_erc_intercompany_country_profile__display_name
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_purchase_order_line__display_name
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_company__display_name
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_partner__display_name
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_sale_order__display_name
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_sale_order_line__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_company__intercompany_enforce_accounts
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__intercompany_enforce_accounts
+msgid "Enforce Intercompany Account Segregation"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Error"
+msgstr "错误"
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_erc_intercompany_country_profile__expense_other_seed_code
+msgid "Expense Other Seed Code"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_erc_intercompany_country_profile__expense_service_seed_code
+msgid "Expense Service Seed Code"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Fornecedores Intercompany"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:product.template,name:erc_intercompany_je.product_tmpl_ic_goods
+msgid "Goods Intercompany"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model_terms:ir.ui.view,arch_db:erc_intercompany_je.res_config_settings_view_form_intercompany_je
+msgid ""
+"Goods with a Bill of Materials (BOM) use the Production Income Account\n"
+"                        configured on the ICS journal, instead of the Default Income Account (Resale)."
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_account_journal__id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_erc_intercompany_country_profile__id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_purchase_order__id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_purchase_order_line__id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_company__id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_partner__id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_sale_order__id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_sale_order_line__id
+msgid "ID"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_erc_intercompany_country_profile__income_production_seed_code
+msgid "Income Production Seed Code"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_erc_intercompany_country_profile__income_resale_seed_code
+msgid "Income Resale Seed Code"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_erc_intercompany_country_profile__income_service_seed_code
+msgid "Income Service Seed Code"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model_terms:ir.ui.view,arch_db:erc_intercompany_je.res_config_settings_view_form_intercompany_je
+msgid "Install Demo Products"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__intercompany_demo_products_installed
+msgid "Install Intercompany Demo Products"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid ""
+"Install prerequisite module '%s' first. ERC Intercompany JE requires "
+"Intercompany Rules to run this workflow."
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_partner__is_intercompany
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_users__is_intercompany
+msgid "Intercompany"
+msgstr "公司间"
+
+#. module: erc_intercompany_je
+#: model_terms:ir.ui.view,arch_db:erc_intercompany_je.res_config_settings_view_form_intercompany_je
+msgid "Intercompany Account Segregation"
+msgstr "公司间科目隔离"
+
+#. module: erc_intercompany_je
+#: model:ir.actions.server,name:erc_intercompany_je.ir_cron_daily_intercompany_account_setup_ir_actions_server
+msgid "Intercompany Account Setup (Daily)"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Intercompany Account Setup - %s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Intercompany Account Setup - Group (%s)"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Intercompany COA Proposal - %s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_company__interco_expense_other_account_id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__interco_expense_other_account_id
+msgid "Intercompany Cost of Goods Sold Account"
+msgstr "公司间销售成本科目"
+
+#. module: erc_intercompany_je
+#: model:ir.model,name:erc_intercompany_je.model_erc_intercompany_country_profile
+msgid "Intercompany Country Account Seed Profile"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model_terms:ir.ui.view,arch_db:erc_intercompany_je.res_config_settings_view_form_intercompany_je
+msgid "Intercompany Demo Products"
+msgstr "公司间演示产品"
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Intercompany Expenses"
+msgstr "公司间费用"
+
+#. module: erc_intercompany_je
+#: model_terms:ir.ui.view,arch_db:erc_intercompany_je.res_config_settings_view_form_intercompany_je
+msgid "Intercompany Journal on Orders"
+msgstr "订单上的公司间日记账"
+
+#. module: erc_intercompany_je
+#: model:ir.actions.server,name:erc_intercompany_je.ir_cron_daily_intercompany_order_journal_realign_ir_actions_server
+msgid "Intercompany Order Journal Realignment (Daily)"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Intercompany Payable"
+msgstr "公司间应付款"
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_company__interco_payable_account_id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__interco_payable_account_id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_partner__intercompany_payable_account_id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_users__intercompany_payable_account_id
+msgid "Intercompany Payable Account"
+msgstr "公司间应付款科目"
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_company__interco_income_production_account_id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__interco_income_production_account_id
+msgid "Intercompany Production Revenue Account"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_company__interco_purchase_journal_id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__interco_purchase_journal_id
+msgid "Intercompany Purchase Journal"
+msgstr "公司间采购日记账"
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Intercompany Purchases"
+msgstr "公司间采购"
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Intercompany Receivable"
+msgstr "公司间应收款"
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_company__interco_receivable_account_id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__interco_receivable_account_id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_partner__intercompany_receivable_account_id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_users__intercompany_receivable_account_id
+msgid "Intercompany Receivable Account"
+msgstr "公司间应收款科目"
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_company__interco_income_resale_account_id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__interco_income_resale_account_id
+msgid "Intercompany Resale Revenue Account"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Intercompany Revenue"
+msgstr "公司间收入"
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_company__interco_sale_journal_id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__interco_sale_journal_id
+msgid "Intercompany Sale Journal"
+msgstr "公司间销售日记账"
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Intercompany Sales"
+msgstr "公司间销售"
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_company__interco_expense_service_account_id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__interco_expense_service_account_id
+msgid "Intercompany Service Expense Account"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_company__interco_income_service_account_id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__interco_income_service_account_id
+msgid "Intercompany Service Revenue Account"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Intercompany Services Expenses"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_company__interco_service_expense_journal_id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__interco_service_expense_journal_id
+msgid "Intercompany Services Expenses Journal"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Intercompany Services Sales"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_company__interco_service_sale_journal_id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__interco_service_sale_journal_id
+msgid "Intercompany Services Sales Journal"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Intercompany demo products are already installed."
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/purchase_order.py:0
+msgid ""
+"Intercompany orders cannot mix services and goods.\n"
+"\n"
+"Please create separate orders:\n"
+"- One for services (→ journal ICE)\n"
+"- One for goods/products (→ journal ICP)"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/sale_order.py:0
+msgid ""
+"Intercompany orders cannot mix services and goods.\n"
+"\n"
+"Please create separate orders:\n"
+"- One for services (→ journal ISS)\n"
+"- One for goods/products (→ journal ICS)"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_purchase_order__is_intercompany_journal_display
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_company__is_intercompany_journal_display
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__is_intercompany_journal_display
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_sale_order__is_intercompany_journal_display
+msgid "Is Inter Company Journal Display"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model,name:erc_intercompany_je.model_account_journal
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_purchase_order__journal_id
+msgid "Journal"
+msgstr "日记账"
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_erc_intercompany_country_profile__write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_erc_intercompany_country_profile__write_date
+msgid "Last Updated on"
+msgstr "最后更新日期"
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Legacy cleanup skipped: %s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Linked existing: %s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Linked journals: %s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:product.template,name:erc_intercompany_je.product_tmpl_ic_material
+msgid "Material BOM for Product Intercompany"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/purchase_order.py:0
+msgid ""
+"Missing intercompany cost/expense account configuration. Configure COGS and "
+"Service Expense intercompany accounts in Settings."
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/sale_order.py:0
+msgid ""
+"Missing intercompany revenue account configuration. Configure "
+"Production/Resale/Service intercompany accounts in Settings."
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Missing templates (manual setup required): %s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "No active companies found in the group."
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_erc_intercompany_country_profile__payable_seed_code
+msgid "Payable Seed Code"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:product.template,name:erc_intercompany_je.product_tmpl_ic_product
+msgid "Product Intercompany"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Production Sales Intercompany"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_partner__purchase_intercompany_journal_id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_users__purchase_intercompany_journal_id
+msgid "Purchase Intercompany Journal"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model,name:erc_intercompany_je.model_purchase_order
+msgid "Purchase Order"
+msgstr "采购订单"
+
+#. module: erc_intercompany_je
+#: model:ir.model,name:erc_intercompany_je.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_erc_intercompany_country_profile__receivable_seed_code
+msgid "Receivable Seed Code"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Removed legacy accounts: %s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Reporting groups ensured: %s"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Resale Sales Intercompany"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_partner__sale_intercompany_journal_id
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_users__sale_intercompany_journal_id
+msgid "Sale Intercompany Journal"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model,name:erc_intercompany_je.model_sale_order
+msgid "Sales Order"
+msgstr "销售订单"
+
+#. module: erc_intercompany_je
+#: model:ir.model,name:erc_intercompany_je.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Services Expenses Intercompany"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:product.template,name:erc_intercompany_je.product_tmpl_ic_services
+msgid "Services Intercompany"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Services Sales Intercompany"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model_terms:ir.ui.view,arch_db:erc_intercompany_je.res_config_settings_view_form_intercompany_je
+msgid "Setup For Company Group"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_company__intercompany_sync_partner_accounts
+#: model:ir.model.fields,field_description:erc_intercompany_je.field_res_config_settings__intercompany_sync_partner_accounts
+msgid "Sync Intercompany Partners AR/AP"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,help:erc_intercompany_je.field_account_journal__intercompany_production_account_id
+msgid ""
+"Used for intercompany sales of goods that have a Bill of Materials (BOM). "
+"When set and the BOM routing feature is enabled, invoice lines for "
+"manufactured products will use this account instead of the journal's Default"
+" Income Account."
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Venda de Mercadorias Intercompany"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Venda de Produção Intercompany"
+msgstr ""
+
+#. module: erc_intercompany_je
+#. odoo-python
+#: code:addons/erc_intercompany_je/models/intercompany_account.py:0
+msgid "Venda de Serviços Intercompany"
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,help:erc_intercompany_je.field_res_company__intercompany_bom_production_account
+#: model:ir.model.fields,help:erc_intercompany_je.field_res_config_settings__intercompany_bom_production_account
+msgid ""
+"When enabled, goods with a Bill of Materials (BOM) will use the Production "
+"Sales Intercompany account (e.g. 40000001) as the income account on "
+"intercompany invoices, even though the journal remains ICS. When disabled, "
+"all goods use the Resale account regardless of BOM."
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,help:erc_intercompany_je.field_res_company__intercompany_enforce_accounts
+#: model:ir.model.fields,help:erc_intercompany_je.field_res_config_settings__intercompany_enforce_accounts
+msgid ""
+"When enabled, invoice/bill preparation for intercompany partners blocks if "
+"required intercompany accounts are missing."
+msgstr ""
+
+#. module: erc_intercompany_je
+#: model:ir.model.fields,help:erc_intercompany_je.field_res_company__intercompany_sync_partner_accounts
+#: model:ir.model.fields,help:erc_intercompany_je.field_res_config_settings__intercompany_sync_partner_accounts
+msgid ""
+"When enabled, the setup process updates existing intercompany partners to "
+"use the dedicated intercompany receivable/payable accounts."
+msgstr ""

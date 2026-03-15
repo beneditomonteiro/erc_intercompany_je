@@ -22,8 +22,17 @@ Key Features:
 * **Demo Products:** Optional example products (Goods, Services, Manufactured with BOM) for testing.
 * **Partner Isolation:** Dedicated AR/AP accounts for intercompany partners with auto-sync.
 * **Fiscal Localization:** Built-in logic for Brazilian (BR), Angolan (AO), Portuguese (PT), and US intercompany standards.
+
+Phase 2 (v7.0):
+* **Setup Status Dashboard:** Live badge showing Not Configured / Partial / Complete per company.
+* **Pre-Setup Validation:** Country and COA checks before account creation.
+* **Chatter & Audit Trail:** Country profile tracking + setup summary posted to partner chatter with PDF.
+* **Auto-Clear on Unflag:** IC journal/account pointers cleared when partner is unflagged.
+* **PDF Setup Summary:** QWeb report with GL accounts, journals, and seed codes.
+* **Invoice Journal Alignment:** Chatter warning on journal mismatch at posting (non-blocking).
+* **Batch Setup Wizard:** Run setup across all group companies from a single wizard.
     """,
-    "version": "19.0.6.5.0",
+    "version": "19.0.7.0.1",
     "category": "Accounting",
     "author": "ERC Implementors (Benedito Monteiro)",
     "website": "https://erc-implementors.com",
@@ -38,6 +47,7 @@ Key Features:
     ],
     "depends": [
         "account",
+        "mail",
         "sale_purchase_stock",
         "sale_stock",
         "purchase_stock",
@@ -47,9 +57,13 @@ Key Features:
     "data": [
         "security/ir.model.access.csv",
         "data/intercompany_backend_params.xml",
+        "data/intercompany_backend_params_tuned.xml",
         "data/intercompany_country_profile.xml",
         "data/ir_cron.xml",
+        "views/wizard_intercompany_setup.xml",
         "views/res_partner.xml",
+        "report/erc_intercompany_je_setup_report.xml",
+        "report/erc_intercompany_je_setup_template.xml",
     ],
     "pre_init_hook": "pre_init_hook",
     "post_init_hook": "post_init_hook",

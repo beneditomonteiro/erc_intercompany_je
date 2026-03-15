@@ -1,0 +1,2 @@
+# erc_intercompany_je currently uses only Odoo + Python standard library imports.
+# Keep this file for deployment parity across fresh environments.

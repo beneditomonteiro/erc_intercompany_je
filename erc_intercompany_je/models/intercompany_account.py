@@ -105,6 +105,54 @@ class Company(models.Model):
         "account on intercompany invoices, even though the journal remains ICS. "
         "When disabled, all goods use the Resale account regardless of BOM.",
     )
+    interco_setup_status = fields.Selection(
+        [
+            ("not_configured", "Not Configured"),
+            ("partial", "Partial"),
+            ("complete", "Complete"),
+        ],
+        string="IC Setup Status",
+        compute="_compute_interco_setup_status",
+        store=False,
+    )
+    interco_missing_account_count = fields.Integer(
+        string="Missing IC Accounts",
+        compute="_compute_interco_setup_status",
+        store=False,
+    )
+    interco_last_setup_date = fields.Datetime(
+        string="Last IC Setup Run",
+        store=True,
+    )
+
+    @api.depends(
+        "interco_income_production_account_id",
+        "interco_income_resale_account_id",
+        "interco_income_service_account_id",
+        "interco_expense_service_account_id",
+        "interco_expense_other_account_id",
+        "interco_receivable_account_id",
+        "interco_payable_account_id",
+    )
+    def _compute_interco_setup_status(self):
+        ic_fields = [
+            "interco_income_production_account_id",
+            "interco_income_resale_account_id",
+            "interco_income_service_account_id",
+            "interco_expense_service_account_id",
+            "interco_expense_other_account_id",
+            "interco_receivable_account_id",
+            "interco_payable_account_id",
+        ]
+        for company in self:
+            missing = sum(1 for f in ic_fields if not company[f])
+            company.interco_missing_account_count = missing
+            if missing == len(ic_fields):
+                company.interco_setup_status = "not_configured"
+            elif missing == 0:
+                company.interco_setup_status = "complete"
+            else:
+                company.interco_setup_status = "partial"
 
     def _get_required_intercompany_module_name(self):
         module_name = (
@@ -1267,12 +1315,39 @@ class Company(models.Model):
             },
         }
 
+    def _validate_before_setup(self):
+        self.ensure_one()
+        errors = []
+        country = self.account_fiscal_country_id or self.country_id
+        if not country:
+            errors.append(_("Company '%s' has no country set.", self.display_name))
+        coa_count = self.env["account.account"].search_count(
+            [("company_ids", "in", self.id), ("active", "=", True)]
+        )
+        if not coa_count:
+            errors.append(
+                _("Company '%s' has no chart of accounts installed.", self.display_name)
+            )
+        return errors
+
     def action_setup_intercompany_accounts(self):
         self.ensure_one()
         if not self._is_intercompany_rules_module_available():
             return self._intercompany_rules_missing_notification(
                 _("Intercompany Account Setup - %s", self.display_name)
             )
+        validation_errors = self._validate_before_setup()
+        if validation_errors:
+            return {
+                "type": "ir.actions.client",
+                "tag": "display_notification",
+                "params": {
+                    "title": _("Intercompany Setup - Validation Failed"),
+                    "message": "\n".join(validation_errors),
+                    "type": "danger",
+                    "sticky": True,
+                },
+            }
         company = self
         account_model = self.env["account.account"].with_company(company)
         profile = self._get_coa_code_profile()
@@ -1432,6 +1507,37 @@ class Company(models.Model):
             )
         if not parts:
             parts.append(_("All intercompany accounts were already configured."))
+
+        self.write({"interco_last_setup_date": fields.Datetime.now()})
+
+        if parts and self.partner_id:
+            self.partner_id.sudo().message_post(
+                body=_("<b>Intercompany Account Setup — %s</b><br/>%s",
+                       self.display_name, "<br/>".join(parts)),
+                message_type="comment",
+                subtype_xmlid="mail.mt_note",
+            )
+            try:
+                report = self.env.ref(
+                    "erc_intercompany_je.action_report_intercompany_setup"
+                )
+                pdf_content, _ = report._render_qweb_pdf(self.ids)
+                fname = "IC_Setup_%s_%s.pdf" % (
+                    self.display_name,
+                    fields.Date.today().strftime("%Y%m%d"),
+                )
+                self.partner_id.sudo().message_post(
+                    body=_("Intercompany setup report attached."),
+                    message_type="comment",
+                    subtype_xmlid="mail.mt_note",
+                    attachments=[(fname, pdf_content)],
+                )
+            except Exception:
+                _logger.warning(
+                    "Could not auto-attach IC setup report for %s",
+                    self.display_name,
+                    exc_info=True,
+                )
 
         return {
             "type": "ir.actions.client",
@@ -1661,6 +1767,15 @@ class ResConfigSettings(models.TransientModel):
     )
     intercompany_bom_production_account = fields.Boolean(
         related="company_id.intercompany_bom_production_account", readonly=False
+    )
+    interco_setup_status = fields.Selection(
+        related="company_id.interco_setup_status",
+    )
+    interco_missing_account_count = fields.Integer(
+        related="company_id.interco_missing_account_count",
+    )
+    interco_last_setup_date = fields.Datetime(
+        related="company_id.interco_last_setup_date",
     )
     intercompany_demo_products_installed = fields.Boolean(
         string="Install Intercompany Demo Products",

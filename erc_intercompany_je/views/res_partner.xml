@@ -59,6 +59,20 @@
                     string="Intercompany Account Segregation"
                     company_dependent="1"
                     help="Analyze the installed chart of accounts and auto-create dedicated intercompany revenue, cost, expense, receivable, and payable accounts.">
+                    <div class="mb-3">
+                        <field name="interco_setup_status" widget="badge"
+                            decoration-success="interco_setup_status == 'complete'"
+                            decoration-warning="interco_setup_status == 'partial'"
+                            decoration-danger="interco_setup_status == 'not_configured'"/>
+                        <span class="ms-2 text-muted"
+                            invisible="interco_missing_account_count == 0">
+                            (<field name="interco_missing_account_count" class="d-inline"/> missing accounts)
+                        </span>
+                        <span class="ms-2 text-muted"
+                            invisible="not interco_last_setup_date">
+                            Last run: <field name="interco_last_setup_date" class="d-inline"/>
+                        </span>
+                    </div>
                     <field name="intercompany_enforce_accounts"/>
                     <field name="intercompany_sync_partner_accounts"/>
                     <div class="mt-3">
@@ -99,6 +113,12 @@
                         <button name="action_setup_intercompany_accounts_group"
                             type="object"
                             string="Setup For Company Group"
+                            class="btn-secondary"/>
+                    </div>
+                    <div class="mt-2">
+                        <button name="%(erc_intercompany_je.action_wizard_intercompany_setup)d"
+                            type="action"
+                            string="Batch Setup (Company Group)"
                             class="btn-secondary"/>
                     </div>
                 </setting>

@@ -1,0 +1,14 @@
+<odoo>
+
+    <record id="action_report_intercompany_setup" model="ir.actions.report">
+        <field name="name">Intercompany Account Setup Summary</field>
+        <field name="model">res.company</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">erc_intercompany_je.report_intercompany_setup_template</field>
+        <field name="report_file">erc_intercompany_je.report_intercompany_setup_template</field>
+        <field name="binding_model_id" ref="base.model_res_company"/>
+        <field name="binding_type">report</field>
+        <field name="group_ids" eval="[(4, ref('account.group_account_readonly'))]"/>
+    </record>
+
+</odoo>

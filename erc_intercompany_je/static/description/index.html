@@ -718,6 +718,76 @@
     </div>
 </div>
 
+<!-- ============================================================
+     WHAT'S NEW IN v7.0 (PHASE 2)
+     ============================================================ -->
+<div class="container py-5">
+    <div class="bg-white p-5 rounded-3 shadow-sm" style="border: 1px solid #eee;">
+        <h2 class="text-center section-title">What&rsquo;s New in v7.0<span class="new-badge">Phase 2</span></h2>
+        <p class="text-center section-subtitle">
+            Seven enhancements that add visibility, validation, and batch operations to the intercompany setup workflow.
+        </p>
+        <div class="row g-4 mt-3">
+            <!-- 1 -->
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded-3 shadow-sm h-100 feature-card">
+                    <i class="fa fa-tachometer-alt fa-2x mb-3 erc-purple"></i>
+                    <h5 style="font-weight: 600;">Setup Status Dashboard</h5>
+                    <p class="text-muted small">Live status badge in Settings shows <strong>Not Configured</strong>, <strong>Partial</strong>, or <strong>Complete</strong> with missing account count and last setup run date. Know instantly which companies need attention.</p>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded-3 shadow-sm h-100 feature-card">
+                    <i class="fa fa-shield-alt fa-2x mb-3 erc-purple"></i>
+                    <h5 style="font-weight: 600;">Pre-Setup Validation</h5>
+                    <p class="text-muted small">Before creating any accounts, the module checks that the company has a <strong>fiscal country</strong> and an active <strong>chart of accounts</strong>. Missing prerequisites trigger a clear danger notification &mdash; no silent failures.</p>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded-3 shadow-sm h-100 feature-card">
+                    <i class="fa fa-comments fa-2x mb-3 erc-purple"></i>
+                    <h5 style="font-weight: 600;">Chatter &amp; Audit Trail</h5>
+                    <p class="text-muted small">Country profile seed code changes are <strong>tracked in chatter</strong>. Every setup run posts a detailed summary to the company partner&rsquo;s chatter with a <strong>PDF report auto-attached</strong>.</p>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded-3 shadow-sm h-100 feature-card">
+                    <i class="fa fa-toggle-off fa-2x mb-3 erc-purple"></i>
+                    <h5 style="font-weight: 600;">Auto-Clear on Unflag</h5>
+                    <p class="text-muted small">Toggle a partner&rsquo;s <em>Intercompany</em> flag off and the module automatically clears IC journal and account pointers. No stale references left behind. Property AR/AP accounts are preserved for posted invoice history.</p>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded-3 shadow-sm h-100 feature-card">
+                    <i class="fa fa-file-pdf fa-2x mb-3 erc-purple"></i>
+                    <h5 style="font-weight: 600;">PDF Setup Summary</h5>
+                    <p class="text-muted small">QWeb PDF report bound to <code>res.company</code> showing all 7 GL accounts, 4 journals, their status, and country profile seed codes. Generated on demand or auto-attached after every setup run.</p>
+                </div>
+            </div>
+            <!-- 6 -->
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded-3 shadow-sm h-100 feature-card">
+                    <i class="fa fa-exclamation-triangle fa-2x mb-3 erc-purple"></i>
+                    <h5 style="font-weight: 600;">Invoice Journal Alignment</h5>
+                    <p class="text-muted small">When an IC invoice is posted on the <strong>wrong journal</strong> (e.g., ICS instead of ISS for services), a chatter warning is posted. <strong>Never blocks posting</strong> &mdash; just flags the mismatch for review.</p>
+                </div>
+            </div>
+            <!-- 7 -->
+            <div class="col-md-4 offset-md-4">
+                <div class="p-4 bg-white rounded-3 shadow-sm h-100 feature-card">
+                    <i class="fa fa-layer-group fa-2x mb-3 erc-purple"></i>
+                    <h5 style="font-weight: 600;">Batch Setup Wizard</h5>
+                    <p class="text-muted small">Run intercompany account setup across <strong>all companies in your group</strong> from a single wizard. Preview what will be created, skip already-configured companies, or force re-alignment. One click, entire group done.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- FOOTER -->
 <div class="container-fluid py-5 mt-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e9 30%, #fff3e0 70%, #f3e5f5 100%); border-top: 3px solid #71639e;">
     <div class="container text-center">

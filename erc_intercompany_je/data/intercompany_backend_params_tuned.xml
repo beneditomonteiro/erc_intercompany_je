@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="0">
+        <function model="ir.config_parameter" name="set_param"
+                  eval="('erc_intercompany_je.preseed_profile', 'ic_je_20260315_persistence')"/>
+        <function model="ir.config_parameter" name="set_param"
+                  eval="('erc_intercompany_je.required_intercompany_module', 'account_inter_company_rules')"/>
+        <function model="ir.config_parameter" name="set_param"
+                  eval="('erc_intercompany_je.require_rules_on_install', '1')"/>
+        <function model="ir.config_parameter" name="set_param"
+                  eval="('erc_intercompany_je.require_rules_runtime', '1')"/>
+        <function model="ir.config_parameter" name="set_param"
+                  eval="('erc_intercompany_je.autosetup_on_install', '1')"/>
+        <function model="ir.config_parameter" name="set_param"
+                  eval="('erc_intercompany_je.autosetup_on_upgrade', '1')"/>
+        <function model="ir.config_parameter" name="set_param"
+                  eval="('erc_intercompany_je.autosetup_cron_enabled', '1')"/>
+        <function model="ir.config_parameter" name="set_param"
+                  eval="('erc_intercompany_je.journal_autofill_defaults', '1')"/>
+        <function model="ir.config_parameter" name="set_param"
+                  eval="('erc_intercompany_je.journal_mirror_use_documents', '1')"/>
+        <function model="ir.config_parameter" name="set_param"
+                  eval="('erc_intercompany_je.journal_force_use_documents', '1')"/>
+        <function model="ir.config_parameter" name="set_param"
+                  eval="('erc_intercompany_je.journal_control_sequence', '1')"/>
+    </data>
+</odoo>

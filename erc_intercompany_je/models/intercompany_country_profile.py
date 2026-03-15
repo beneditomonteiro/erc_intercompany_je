@@ -6,6 +6,7 @@ from odoo import fields, models
 
 class IntercompanyCountryProfile(models.Model):
     _name = "erc.intercompany.country.profile"
+    _inherit = ["mail.thread"]
     _description = "Intercompany Country Account Seed Profile"
     _order = "country_id"
 
@@ -14,14 +15,15 @@ class IntercompanyCountryProfile(models.Model):
         required=True,
         ondelete="cascade",
         index=True,
+        tracking=True,
     )
-    receivable_seed_code = fields.Char(required=True)
-    payable_seed_code = fields.Char(required=True)
-    income_production_seed_code = fields.Char(required=True)
-    income_resale_seed_code = fields.Char()
-    income_service_seed_code = fields.Char(required=True)
-    expense_service_seed_code = fields.Char(required=True)
-    expense_other_seed_code = fields.Char(required=True)
+    receivable_seed_code = fields.Char(required=True, tracking=True)
+    payable_seed_code = fields.Char(required=True, tracking=True)
+    income_production_seed_code = fields.Char(required=True, tracking=True)
+    income_resale_seed_code = fields.Char(tracking=True)
+    income_service_seed_code = fields.Char(required=True, tracking=True)
+    expense_service_seed_code = fields.Char(required=True, tracking=True)
+    expense_other_seed_code = fields.Char(required=True, tracking=True)
 
     _sql_constraints = [
         (

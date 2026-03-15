@@ -1,0 +1,118 @@
+<odoo>
+
+    <template id="report_intercompany_setup_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="company">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Intercompany Account Setup Summary</h2>
+                        <div class="row mt-3 mb-3">
+                            <div class="col-6">
+                                <strong>Company:</strong> <span t-field="company.display_name"/>
+                            </div>
+                            <div class="col-3">
+                                <strong>Country:</strong>
+                                <span t-field="company.account_fiscal_country_id.name"/>
+                            </div>
+                            <div class="col-3">
+                                <strong>Status:</strong>
+                                <span t-field="company.interco_setup_status"/>
+                            </div>
+                        </div>
+                        <div class="mb-3" t-if="company.interco_last_setup_date">
+                            <strong>Last Setup Run:</strong>
+                            <span t-field="company.interco_last_setup_date"/>
+                        </div>
+
+                        <h4 class="mt-4">GL Accounts</h4>
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Code</th>
+                                    <th>Name</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="account_fields" t-value="[
+                                    ('Production Revenue', company.interco_income_production_account_id),
+                                    ('Resale Revenue', company.interco_income_resale_account_id),
+                                    ('Service Revenue', company.interco_income_service_account_id),
+                                    ('Service Expense', company.interco_expense_service_account_id),
+                                    ('COGS', company.interco_expense_other_account_id),
+                                    ('Receivable', company.interco_receivable_account_id),
+                                    ('Payable', company.interco_payable_account_id),
+                                ]"/>
+                                <t t-foreach="account_fields" t-as="af">
+                                    <tr>
+                                        <td><t t-out="af[0]"/></td>
+                                        <td><t t-if="af[1]"><t t-out="af[1].code"/></t></td>
+                                        <td><t t-if="af[1]"><t t-out="af[1].name"/></t></td>
+                                        <td>
+                                            <t t-if="af[1]">
+                                                <span class="text-success">Configured</span>
+                                            </t>
+                                            <t t-else="">
+                                                <span class="text-danger">Missing</span>
+                                            </t>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+
+                        <h4 class="mt-4">Journals</h4>
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Code</th>
+                                    <th>Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="journal_fields" t-value="[
+                                    ('IC Sales', company.interco_sale_journal_id),
+                                    ('IC Service Sales', company.interco_service_sale_journal_id),
+                                    ('IC Purchases', company.interco_purchase_journal_id),
+                                    ('IC Service Expenses', company.interco_service_expense_journal_id),
+                                ]"/>
+                                <t t-foreach="journal_fields" t-as="jf">
+                                    <tr>
+                                        <td><t t-out="jf[0]"/></td>
+                                        <td><t t-if="jf[1]"><t t-out="jf[1].code"/></t><t t-else="">—</t></td>
+                                        <td><t t-if="jf[1]"><t t-out="jf[1].name"/></t><t t-else="">Not configured</t></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+
+                        <t t-set="profile" t-value="env['erc.intercompany.country.profile'].search([('country_id', '=', company.account_fiscal_country_id.id or company.country_id.id)], limit=1)"/>
+                        <div t-if="profile" class="mt-4">
+                            <h4>Country Profile Seed Codes</h4>
+                            <table class="table table-sm table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Account Type</th>
+                                        <th>Seed Code</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Receivable</td><td><t t-out="profile.receivable_seed_code"/></td></tr>
+                                    <tr><td>Payable</td><td><t t-out="profile.payable_seed_code"/></td></tr>
+                                    <tr><td>Income Production</td><td><t t-out="profile.income_production_seed_code"/></td></tr>
+                                    <tr><td>Income Resale</td><td><t t-out="profile.income_resale_seed_code"/></td></tr>
+                                    <tr><td>Income Service</td><td><t t-out="profile.income_service_seed_code"/></td></tr>
+                                    <tr><td>Expense Service</td><td><t t-out="profile.expense_service_seed_code"/></td></tr>
+                                    <tr><td>Expense Other</td><td><t t-out="profile.expense_other_seed_code"/></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

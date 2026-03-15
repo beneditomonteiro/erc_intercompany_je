@@ -108,13 +108,23 @@ class ResPartner(models.Model):
 
     def write(self, vals):
         res = super().write(vals)
-        if {
+        ic_fields = {
             "is_intercompany",
             "intercompany_receivable_account_id",
             "intercompany_payable_account_id",
             "sale_intercompany_journal_id",
             "purchase_intercompany_journal_id",
-        } & set(vals):
+        }
+        if ic_fields & set(vals):
+            if "is_intercompany" in vals and not vals["is_intercompany"]:
+                self.filtered(lambda p: not p.is_intercompany).with_context(
+                    skip_intercompany_partner_account_sync=True
+                ).write({
+                    "sale_intercompany_journal_id": False,
+                    "purchase_intercompany_journal_id": False,
+                    "intercompany_receivable_account_id": False,
+                    "intercompany_payable_account_id": False,
+                })
             self._apply_intercompany_partner_accounts()
         return res
 

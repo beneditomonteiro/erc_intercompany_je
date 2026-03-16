@@ -42,7 +42,7 @@ Phase 2 (v7.0):
     "price": 50.0,
     "currency": "USD",
     "images": [
-        "static/description/banner.jpg",
+        "static/description/banner.png",
         "static/description/icon.png"
     ],
     "depends": [
